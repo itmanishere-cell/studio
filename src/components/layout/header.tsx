@@ -49,7 +49,7 @@ export default function Header() {
           ))}
         </nav>
         <div className="flex flex-1 items-center justify-end gap-2">
-          <Button asChild>
+          <Button asChild className="shadow-md hover:shadow-lg transition-shadow">
             <Link href="/contact">Request a Quote</Link>
           </Button>
           <Sheet open={isOpen} onOpenChange={setIsOpen}>

@@ -10,9 +10,10 @@ type ProductCardProps = {
   imageUrl: string
   imageHint: string
   productUrl: string
+  useGradient?: boolean
 }
 
-export default function ProductCard({ name, description, imageUrl, imageHint, productUrl }: ProductCardProps) {
+export default function ProductCard({ name, description, imageUrl, imageHint, productUrl, useGradient = false }: ProductCardProps) {
   return (
     <Card className="flex flex-col overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
       <CardHeader className="p-0">
@@ -34,7 +35,7 @@ export default function ProductCard({ name, description, imageUrl, imageHint, pr
         </p>
       </CardContent>
       <CardFooter className="p-6 pt-0">
-        <Button asChild className="w-full" variant="secondary">
+        <Button asChild className={`w-full ${useGradient ? 'text-white bg-gradient-to-r from-[#ed4f1b] to-[#f47c52] hover:from-[#f47c52] hover:to-[#ed4f1b]' : ''}`} variant={useGradient ? undefined : "secondary"}>
           <Link href={productUrl}>
             Learn More
             <ArrowRight className="ml-2 h-4 w-4" />

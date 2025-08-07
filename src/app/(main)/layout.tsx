@@ -1,5 +1,6 @@
 import Footer from "@/components/layout/footer";
 import Header from "@/components/layout/header";
+import CtaBanner from "@/components/layout/cta-banner";
 
 export default function MainLayout({
   children,
@@ -10,6 +11,7 @@ export default function MainLayout({
     <div className="flex flex-col min-h-screen">
       <Header />
       <main className="flex-grow">{children}</main>
+      <CtaBanner />
       <Footer />
     </div>
   );

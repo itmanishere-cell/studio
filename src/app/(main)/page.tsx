@@ -72,7 +72,7 @@ export default function Home() {
               <Link href="/products">Explore Our Products</Link>
             </Button>
             <Button size="lg" variant="secondary" asChild>
-              <Link href="/contact">Request a Quote</Link>
+              <Link href="/contact">Call To Us</Link>
             </Button>
           </div>
         </div>
@@ -160,6 +160,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      
     </>
   )
 }

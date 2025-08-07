@@ -2,6 +2,23 @@
 # https://firebase.google.com/docs/app-hosting/configure
 
 runConfig:
-  # Increase this value if you'd like to automatically spin up
+  # Increase this value to automatically spin up
   # more instances in response to increased traffic.
   maxInstances: 1
+  # The amount of CPU to allocate to a container instance.
+  # The value is in number of CPUs. For example, 0.5 is half a CPU.
+  cpu: 1
+  # The amount of memory to allocate to a container instance.
+  # The value is in MiB. For example, 512 is 512 MiB.
+  memoryMiB: 512
+
+# Specifies the command to run to build your app.
+build:
+  # Command to execute to build your app.
+  command: npm run build
+
+# Defines the entrypoint for your app.
+# This is the command that's run to start your server.
+# The entrypoint must be a start command that boots a server and listens on the
+# port specified by the "PORT" environment variable.
+entrypoint: npm start

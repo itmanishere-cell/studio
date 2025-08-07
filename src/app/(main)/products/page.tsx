@@ -1,4 +1,6 @@
 import ProductCard from "@/components/product-card"
+import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 const allProducts = [
   {
@@ -70,6 +72,19 @@ export default function ProductsPage() {
                 productUrl={`/products#${product.id}`}
               />
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="pb-16 md:pb-24">
+        <div className="container">
+          <div className="border rounded-lg p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <h3 className="font-headline text-2xl font-semibold text-center md:text-left">
+              This is a call to action
+            </h3>
+            <Button size="lg" asChild>
+              <Link href="/contact">This is a button</Link>
+            </Button>
           </div>
         </div>
       </section>

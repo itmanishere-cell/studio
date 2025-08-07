@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { Menu, ShieldCheck } from "lucide-react"
+import { Menu, ShieldCheck, Phone } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { useState } from "react"
@@ -50,7 +50,10 @@ export default function Header() {
         </nav>
         <div className="flex flex-1 items-center justify-end gap-2">
           <Button asChild className="shadow-md hover:shadow-lg transition-shadow">
-            <Link href="/contact">Request a Quote</Link>
+            <a href="tel:+9812345">
+              <Phone className="h-4 w-4" />
+              +9812345
+            </a>
           </Button>
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>

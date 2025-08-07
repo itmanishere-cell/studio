@@ -11,7 +11,7 @@ export default function MainLayout({
     <div className="flex flex-col min-h-screen">
       <Header />
       <main className="flex-grow">{children}</main>
-      <div className="mt-8">
+      <div className="mt-5">
         <CtaBanner />
       </div>
       <Footer />
